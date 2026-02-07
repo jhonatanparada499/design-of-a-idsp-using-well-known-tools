@@ -2,5 +2,5 @@
 Research documentation as part of CRSP CUNY.  
 
 ## Sources
-- [Stratosphere Research Laboratory](https://www.stratosphereips.org/)
-  - [Malware Capture Facility Project](https://www.stratosphereips.org/datasets-malware)
+- [Malware Traffic Analysis](https://www.malware-traffic-analysis.net/2025/12/30/index.html)
+
