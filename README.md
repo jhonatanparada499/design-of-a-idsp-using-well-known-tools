@@ -50,4 +50,4 @@ sudo suricata-update
 ## Challenges & Resolutions
 The Rule trigger example from the Suricata's Quickstart guide was not working on Debian VM. Thanks to this [article](https://www.criticaldesign.net/post/how-to-setup-a-suricata-ips), I realized that the interface parameter was misconfigured. I fixed it by switching from 'eth0' to 'enp1s0'.
 
-![](images/'Screenshot from 2026-02-13 18-00-55.png')
+![Suricata.yaml](./images/'Screenshot from 2026-02-13 18-00-55'.png)
