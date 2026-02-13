@@ -15,6 +15,7 @@ virt-manager
 ## Background Knowledge
 ### Suricata
 [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
+
 (9.1)[Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 
 Configuration file
