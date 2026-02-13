@@ -30,4 +30,20 @@ sudo systemctl restart suricata
 ls /var/log/suricata/
 ```
 
+To see alerts:
+```
+sudo tail -f /var/log/suricata/fast.log
+```
 
+To see rules (fetched using suricata-update, size: 41M):
+```
+/var/lib/suricata/rules/suricata.rules
+```
+
+### Fetching ET Open ruleset
+"With teh tool suricata-update rules can be fetched to be provided for Suricata"
+```
+sudo suricata-update
+
+
+```
