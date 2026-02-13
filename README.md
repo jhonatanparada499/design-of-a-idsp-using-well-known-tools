@@ -12,8 +12,11 @@ Open virt-manager Virtual Machinve manager
 virt-manager
 ```
 
-## Suricata
+## Background Knowledge
+### Suricata
 [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
+(9.1)[Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
+
 Configuration file
 ```
 sudo vim /etc/suricata/suricata.yaml
@@ -54,3 +57,5 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 
 ## Rules
 [Proofpoint Emerging Threats Rules](https://rules.emergingthreats.net/)
+![Proofpoint Emerging Threats Rules](./images/Proofpoint_Emerging_Threats_Rules.png)
+
