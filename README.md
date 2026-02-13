@@ -12,11 +12,22 @@ Open virt-manager Virtual Machinve manager
 virt-manager
 ```
 
-## Security Onion
-I download the ISO image Using
+## Suricata
+[Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
+Configuration file
 ```
-wget https://download.securityonion.net/file/securityonion/securityonion-2.4.201-20260114.iso
+sudo vim /etc/suricata/suricata.yaml
 ```
 
-Source: [Security-Onion-Solutions](https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md)
+Running Suricata
+```
+sudo systemctl restart suricata
+```
+
+### Logs and Stats Directory
+
+```
+ls /var/log/suricata/
+```
+
 
