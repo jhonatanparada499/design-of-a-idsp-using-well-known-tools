@@ -16,7 +16,7 @@ virt-manager
 ### Suricata
 (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 
-(9.1) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
+(9.2. Adding Your Own Rules) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 
 
 Configuration file
@@ -51,6 +51,7 @@ To see rules (fetched using suricata-update, size: 41M):
 sudo suricata-update
 ```
 
+To enable rules that are disabled by default, use /etc/suricata/enable.conf
 
 ### Malware-Traffic-Analysis.com
 - [2026-01-31 - TRAFFIC ANALYSIS EXERCISE: LUMMA IN THE ROOM-AH](https://www.malware-traffic-analysis.net/2026/01/31/index.html)
