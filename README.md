@@ -18,7 +18,7 @@ Using only one virtual machine running Debian/LXDE
 ### Suricata
 (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 
-(9.3. Rule Reloads) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
+(10. Making sense out of Alerts) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 
 Version: 7.0.10
 
