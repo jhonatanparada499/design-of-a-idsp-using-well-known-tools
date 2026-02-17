@@ -20,6 +20,7 @@ Using only one virtual machine running Debian/LXDE
 
 (9.2. Adding Your Own Rules) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 
+Version: 7.0.10
 
 Configuration file
 ```
