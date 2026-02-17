@@ -12,6 +12,8 @@ Open virt-manager Virtual Machinve manager
 virt-manager
 ```
 
+Using only one virtual machine running Debian/LXDE
+
 ## Background Knowledge
 ### Suricata
 (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
@@ -63,5 +65,6 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 
 ## Rules
 [Proofpoint Emerging Threats Rules](https://rules.emergingthreats.net/)
+
 ![Proofpoint Emerging Threats Rules](./images/Proofpoint_Emerging_Threats_Rules.png)
 
