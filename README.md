@@ -66,6 +66,7 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 
 ## Rules
 [Proofpoint Emerging Threats Rules](https://rules.emergingthreats.net/)
+'The "ET" indicates the rule came from the Emerging Threats (Proofpoint) project.'
 
 ![Proofpoint Emerging Threats Rules](./images/Proofpoint_Emerging_Threats_Rules.png)
 
