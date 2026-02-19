@@ -73,6 +73,7 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 ## Event Viewer and Alert Management Tool
 Evebox is a "a web-based, open-source event viewer and alert management tool."
 
+### Docker
 Evebox Docker container was configured using the tutorial: [From Zero to a Home IDS Dashboard: Suricata + EveBox (with live alerts, GeoIP & rule tuning)](https://medium.com/@oscar.yanez.feijoo/from-zero-to-a-home-ids-dashboard-suricata-evebox-with-live-alerts-geoip-rule-tuning-0046003148fc)
 
 Make sure Docker is enabled. Then run.
@@ -81,5 +82,9 @@ docker start evebox
 ```
 
 Then access the web interface using ```https://localhost:5636```
+
+### Local
+I installed RMP package for debian at [Debian/Ubuntu x86_64](https://evebox.org/#downloads)
+Runnig with ```evebox server -D . --datastore sqlite --input /var/log/suricata/eve.json```
 
 Evebox filter syntax: Lucene-based query syntax
