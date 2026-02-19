@@ -84,7 +84,11 @@ docker start evebox
 Then access the web interface using ```https://localhost:5636```
 
 ### Local
-I installed RMP package for debian at [Debian/Ubuntu x86_64](https://evebox.org/#downloads)
+I installed .deb package for debian at [Debian/Ubuntu x86_64](https://evebox.org/#downloads)
 Runnig with ```evebox server -D . --datastore sqlite --input /var/log/suricata/eve.json```
 
 Evebox filter syntax: Lucene-based query syntax
+
+Evebox config file: ```/etc/evebox/evebox.yaml```
+
+
