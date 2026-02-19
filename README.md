@@ -91,4 +91,4 @@ Evebox filter syntax: Lucene-based query syntax
 
 Evebox config file: ```/etc/evebox/evebox.yaml```
 
-
+Next Task: Investigate Snort and why it doesn't have an index of rulesets like Suricata.
