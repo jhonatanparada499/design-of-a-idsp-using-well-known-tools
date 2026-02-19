@@ -81,3 +81,5 @@ docker start evebox
 ```
 
 Then access the web interface using ```https://localhost:5636```
+
+Evebox filter syntax: Lucene-based query syntax
