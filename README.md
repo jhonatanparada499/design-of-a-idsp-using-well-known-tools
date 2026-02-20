@@ -73,7 +73,7 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 ## Event Viewer and Alert Management Tool
 (Evebox)[https://github.com/jasonish/evebox] is a "a web-based, open-source event viewer and alert management tool."
 
-### Docker ([What is Docker?](https://docs.docker.com/get-started/docker-overview/))
+### Docker ([What can I use Docker for?](https://docs.docker.com/get-started/docker-overview/))
 Evebox Docker container was configured using the tutorial: [From Zero to a Home IDS Dashboard: Suricata + EveBox (with live alerts, GeoIP & rule tuning)](https://medium.com/@oscar.yanez.feijoo/from-zero-to-a-home-ids-dashboard-suricata-evebox-with-live-alerts-geoip-rule-tuning-0046003148fc)
 
 Make sure Docker is enabled. Then run.
