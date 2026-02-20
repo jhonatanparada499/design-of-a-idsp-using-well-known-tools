@@ -94,3 +94,4 @@ Evebox config file: ```/etc/evebox/evebox.yaml```
 Next Task: Investigate Snort and why it doesn't have an index of rulesets like Suricata.
 
 Next Task: Learn about Docker
+Next Task: Difference btw Snort and Suricata rules
