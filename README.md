@@ -93,3 +93,4 @@ Evebox filter syntax: Lucene-based query syntax
 
 Evebox config file: ```/etc/evebox/evebox.yaml```
 
+Task: Investigate how rule signatures work and how they are triggered.
