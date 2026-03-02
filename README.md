@@ -71,9 +71,9 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 ![Proofpoint Emerging Threats Rules](./images/Proofpoint_Emerging_Threats_Rules.png)
 
 ## Event Viewer and Alert Management Tool
-(Evebox)[https://github.com/jasonish/evebox] is a "a web-based, open-source event viewer and alert management tool."
+[Evebox](https://github.com/jasonish/evebox) is a "a web-based, open-source event viewer and alert management tool."
 
-### Docker ([Multi-Stage Builds/Try it out](https://docs.docker.com/get-started/docker-overview/))
+### Docker ([Publishing and exposing ports](https://docs.docker.com/get-started/docker-overview/))
 Source: https://docs.docker.com/engine/install/ubuntu/
 
 Evebox Docker container was configured using the tutorial: [From Zero to a Home IDS Dashboard: Suricata + EveBox (with live alerts, GeoIP & rule tuning)](https://medium.com/@oscar.yanez.feijoo/from-zero-to-a-home-ids-dashboard-suricata-evebox-with-live-alerts-geoip-rule-tuning-0046003148fc)
