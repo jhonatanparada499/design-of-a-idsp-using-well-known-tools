@@ -1,6 +1,13 @@
 # Design of a IDSP Using Well Known Tools
 Research documentation as part of CRSP CUNY.  
 
+## Table of Contents
+- Environment Setup
+- Background Knowledge
+- Challenges and Resolutions
+- Snort and Suricata Rules
+- Event Viewer and Alert Management Tool
+
 ## Environment Setup
 Enable libvirtd service
 ```
@@ -16,9 +23,9 @@ Using only one virtual machine running Debian/LXDE
 
 ## Background Knowledge
 ### Suricata
-(Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
-
-(10. Making sense out of Alerts) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
+- (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
+- (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
+- (Reading: Rules Format) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)
 
 Version: 7.0.10
 
@@ -64,7 +71,7 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 
 ![Suricata.yaml](./images/NIC_config.png)
 
-## Rules
+## Snort and Suricata Rules
 [Proofpoint Emerging Threats Rules](https://rules.emergingthreats.net/)
 'The "ET" indicates the rule came from the Emerging Threats (Proofpoint) project.'
 
