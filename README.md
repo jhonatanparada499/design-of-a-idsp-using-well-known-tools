@@ -6,7 +6,7 @@ Research documentation as part of CRSP CUNY.
 - Background Knowledge
 - Challenges and Resolutions
 - Snort and Suricata Rules
-- Event Viewer and Alert Management Tool
+- Event Viewer and Alert Management Tool (Evebox)
 
 ## Environment Setup
 Enable libvirtd service
@@ -22,12 +22,10 @@ virt-manager
 Using only one virtual machine running Debian/LXDE
 
 ## Background Knowledge
-### Suricata
+### Suricata (Version: 7.0.10)
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 - (Reading: Rules Format) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)
-
-Version: 7.0.10
 
 Configuration file
 ```
