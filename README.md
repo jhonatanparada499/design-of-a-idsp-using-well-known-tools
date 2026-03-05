@@ -7,6 +7,7 @@ Research documentation as part of CRSP CUNY.
 - Challenges and Resolutions
 - Snort and Suricata Rules
 - Event Viewer and Alert Management Tool (Evebox)
+- Current Standing
 
 ## Environment Setup
 Enable libvirtd service
@@ -99,3 +100,7 @@ Evebox filter syntax: Lucene-based query syntax
 Evebox config file: ```/etc/evebox/evebox.yaml```
 
 Task: Investigate how rule signatures work and how they are triggered.
+
+## Current Standing  
+- Reading Suricata rule Format and Evebox+Suricata & Snort Docker container
+- How to integrate Snort into Evebox
