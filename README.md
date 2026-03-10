@@ -27,6 +27,7 @@ Using only one virtual machine running Debian/LXDE
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 - (Reading: 8.1.2.1. Explicit rule hooks) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)
+**Notes:** What are sticky buffers?
 
 Configuration file
 ```
