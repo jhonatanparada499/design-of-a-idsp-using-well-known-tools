@@ -26,8 +26,13 @@ Using only one virtual machine running Debian/LXDE
 ### Suricata (Version: 7.0.10)
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
-- (Reading: 8.1.2.1. Explicit rule hooks) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)
-**Notes:** What are sticky buffers?
+- (8.1.4. Ports (source and destination)) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)
+**Notes:** What are sticky buffers?  
+```
+For example, to match against a DNS black list called dns-bl:
+
+dns.query; dataset:isset,dns-bl; # This can be helpful to understand rule matching
+```
 
 Configuration file
 ```
