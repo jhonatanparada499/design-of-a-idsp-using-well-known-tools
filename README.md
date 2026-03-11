@@ -26,7 +26,7 @@ Using only one virtual machine running Debian/LXDE
 ### Suricata (Version: 7.0.10)
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
-- (8.1.5.1. Transactional rules) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)  
+- (8.1.6. Rule options) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)  
 **Notes:**  
 1. What are sticky buffers?  
 2. I think I understand the rule matching process, the syntax goes by key-pairs (key:pair) separated by semicolons. If a key has no pair (e.x. "...;ip.src;..." or "...dns.query;..." or "...;http.method;...") look up next key-pair value which will provide the info needed for the pairless key (e.x "ip.src;dataset:badips" or "dns.query;dataset:dns-bl" or http.method;content:"GET")  
@@ -37,7 +37,7 @@ For example, to match against a DNS black list called dns-bl:
 dns.query; dataset:isset,dns-bl; # This can be helpful to understand rule matching
 ```
 
-3. Transactional rules (=>)  
+3. Transactional rules (=>) [source](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html#transactional-rules)  
 ```
 alert http any any => 5.6.7.8 80 (    # Match only when uri is sent and server responds with 200 stat code
   msg:"matching both uri and status";
