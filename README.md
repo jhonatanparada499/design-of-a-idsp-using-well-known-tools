@@ -26,7 +26,7 @@ Using only one virtual machine running Debian/LXDE
 ### Suricata (Version: 7.0.10)
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
-- (8.1.6.3. Normalized Buffers) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)  
+- (8.2. Meta Keywords) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)  
 **Notes:**  
 1. What are sticky buffers? Placen the buffer names first, then placing keywords that apply to it(e.g. http.uri; content:"hello")   
 2. I think I understand the rule matching process, the syntax goes by key-pairs (key:pair) separated by semicolons. If a key has no pair (e.x. "...;ip.src;..." or "...dns.query;..." or "...;http.method;...") look up next key-pair value which will provide the info needed for the pairless key (e.x "ip.src;dataset:badips" or "dns.query;dataset:dns-bl" or http.method;content:"GET")  
