@@ -37,6 +37,9 @@ For example, to match against a DNS black list called dns-bl:
 dns.query; dataset:isset,dns-bl; # This can be helpful to understand rule matching
 ```
 
+"Normalized buffers are: all HTTP-keywords, reassembled streams, TLS-, SSL-, SSH-, FTP- and dcerpc-buffers"
+![normalized buffers](https://docs.suricata.io/en/suricata-8.0.2/_images/normalization1.png)
+
 3. Transactional rules (=>) [source](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html#transactional-rules)  
 ```
 alert http any any => 5.6.7.8 80 (    # Match only when uri is sent and server responds with 200 stat code
