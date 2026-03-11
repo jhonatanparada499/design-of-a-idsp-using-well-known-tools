@@ -27,7 +27,10 @@ Using only one virtual machine running Debian/LXDE
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 - (8.1.4. Ports (source and destination)) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)
-**Notes:** What are sticky buffers?  
+**Notes:**  
+1. What are sticky buffers?  
+2. I think I understand the rule matching process, the syntax goes by key-pairs (key:pair) separated by semicolons. If a key has no pair (e.x "...;ip.src;... or ...dns.query;..." or ...;http.method;...) look up next key-pair value which will provide the info needed for the pairless key (e.x "ip.src;dataset:badips" or "dns.query;dataset:dns-bl" or http.method;content:"GET")  
+* a function can be passed like (dns.query;to_md5;dataset:dns-bl)  
 ```
 For example, to match against a DNS black list called dns-bl:
 
