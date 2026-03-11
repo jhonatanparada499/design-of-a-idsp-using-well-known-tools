@@ -37,6 +37,16 @@ For example, to match against a DNS black list called dns-bl:
 dns.query; dataset:isset,dns-bl; # This can be helpful to understand rule matching
 ```
 
+3. Transactional rules (=>)  
+```
+alert http any any => 5.6.7.8 80 (    # Match only when uri is sent and server responds with 200 stat code
+  msg:"matching both uri and status";
+  sid: 1;
+  http.uri; content: "/download";
+  http.stat_code; content: "200";
+)
+```
+
 Configuration file
 ```
 sudo vim /etc/suricata/suricata.yaml
