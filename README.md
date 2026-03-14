@@ -139,5 +139,5 @@ Evebox config file: ```/etc/evebox/evebox.yaml```
 Task: Investigate how rule signatures work and how they are triggered. (Done)
 
 ## Current Standing  
-- Can I integrate Snort with Evebox? If there is no one, I will prob have to create a compose file.
-- Replay Bad traffic to IDS Docker containers.
+- Test replay traffic to container.
+- Replay Bad traffic to Docker container using traffic with IoC
