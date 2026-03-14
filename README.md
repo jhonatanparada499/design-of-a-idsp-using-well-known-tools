@@ -27,6 +27,8 @@ Using only one virtual machine running Debian/LXDE
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 - (Done) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)  
+- (Statistics) [Statistics](https://docs.suricata.io/en/latest/performance/statistics.html)
+
 **Notes:**  
 1. What are sticky buffers? Placen the buffer names first, then placing keywords that apply to it(e.g. http.uri; content:"hello")   
 2. I think I understand the rule matching process, the syntax goes by key-pairs (key:pair) separated by semicolons. If a key has no pair (e.x. "...;ip.src;..." or "...dns.query;..." or "...;http.method;...") look up next key-pair value which will provide the info needed for the pairless key (e.x "ip.src;dataset:badips" or "dns.query;dataset:dns-bl" or http.method;content:"GET")  
@@ -138,6 +140,25 @@ Evebox config file: ```/etc/evebox/evebox.yaml```
 
 Task: Investigate how rule signatures work and how they are triggered. (Done)
 
+## Replaying Traffic
+[Tcpreplay](https://tcpreplay.appneta.com/) "is a suite of free Open Source utilities for editing and replaying previously captured network traffic".  
+
+```bash
+root@pw29:~# tcpreplay -i eth7 -tK --loop 5000 --unique-ip smallFlows.pcap
+File Cache is enabled
+Actual: 71305000 packets (46082655000 bytes) sent in 38.05 seconds.
+Rated: 1194330011.6 Bps, 9554.64 Mbps, 1848020.72 pps
+Flows: 6045000 flows, 156669.03 fps, 71215000 flow packets, 90000 non-flow
+Statistics for network device: eth7
+	Attempted packets:         71305000
+	Successful packets:        71305000
+	Failed packets:            0
+	Truncated packets:         0
+	Retried packets (ENOBUFS): 0
+	Retried packets (EAGAIN):  0
+```
+
 ## Current Standing  
+- Read Performance/statistics section to understand stats.log file
 - Test replay traffic to container.
-- Replay Bad traffic to Docker container using traffic with IoC
+- Replay Bad traffic (from Malware-Traffic-Analysis) to Docker container using traffic with IoC
