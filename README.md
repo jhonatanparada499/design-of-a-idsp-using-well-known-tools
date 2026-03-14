@@ -50,6 +50,12 @@ alert http any any => 5.6.7.8 80 (    # Match only when uri is sent and server r
 )
 ```
 
+**Signatures using Regular Expressions for String Matching**  
+```
+alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
+```
+content="uid=0|28|root|29" means match whether uid=0, or uid=28, ..., uid=29. This example uses the pipe operator in ReGex.
+
 Configuration file
 ```
 sudo vim /etc/suricata/suricata.yaml
