@@ -102,7 +102,7 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 [Evebox](https://github.com/jasonish/evebox) is a "a web-based, open-source event viewer and alert management tool."
 [Evectl](https://evebox.org/evectl) "is a tool to help easily manage Suricata and EveBox on Linux systems using containers with Docker or Podman.". That is why I spent two weeks learning about Docker.  
 
-[Evectl](./images/Evectl_Setup.png)
+![Evectl](./images/Evectl_Setup.png)
 
 ### [Docker](https://docs.docker.com/get-started/docker-overview/)
 Source: https://docs.docker.com/engine/install/ubuntu/
