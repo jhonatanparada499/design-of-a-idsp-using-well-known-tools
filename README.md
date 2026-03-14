@@ -100,6 +100,7 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 
 ## Event Viewer and Alert Management Tool
 [Evebox](https://github.com/jasonish/evebox) is a "a web-based, open-source event viewer and alert management tool."
+[Evectl](https://evebox.org/evectl) "is a tool to help easily manage Suricata and EveBox on Linux systems using containers with Docker or Podman.". That is why I spent two weeks learning about Docker.
 
 ### [Docker](https://docs.docker.com/get-started/docker-overview/)
 Source: https://docs.docker.com/engine/install/ubuntu/
@@ -121,7 +122,7 @@ Evebox filter syntax: Lucene-based query syntax
 
 Evebox config file: ```/etc/evebox/evebox.yaml```
 
-Task: Investigate how rule signatures work and how they are triggered.
+Task: Investigate how rule signatures work and how they are triggered. (Done)
 
 ## Current Standing  
 - Reading Suricata rule Format and Evebox+Suricata & Snort Docker container
