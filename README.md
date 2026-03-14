@@ -133,5 +133,4 @@ Evebox config file: ```/etc/evebox/evebox.yaml```
 Task: Investigate how rule signatures work and how they are triggered. (Done)
 
 ## Current Standing  
-- Reading Suricata rule Format and Evebox+Suricata & Snort Docker container
-- How to integrate Snort into Evebox
+- Can I integrate Snort with Evebox?
