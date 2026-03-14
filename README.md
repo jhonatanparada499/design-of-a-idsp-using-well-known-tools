@@ -104,6 +104,12 @@ The Rule trigger example from the Suricata's Quickstart guide was not working on
 
 ![Evectl](./images/Evectl_Setup.png)
 
+Disabling ET INFO Spotify, which is a noisy alert.  
+![Disable](./images/Disable_conf.png)
+
+Evectl TUI  
+![Evectl_CLI](./images/EveCtl_CLI.png)
+
 ### [Docker](https://docs.docker.com/get-started/docker-overview/)
 Source: https://docs.docker.com/engine/install/ubuntu/
 
