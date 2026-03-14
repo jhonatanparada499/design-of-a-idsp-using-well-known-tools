@@ -134,3 +134,4 @@ Task: Investigate how rule signatures work and how they are triggered. (Done)
 
 ## Current Standing  
 - Can I integrate Snort with Evebox?
+- Replay Bad traffic to IDS Docker containers.
