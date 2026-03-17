@@ -22,13 +22,15 @@ virt-manager
 
 Using only one virtual machine running Debian/LXDE
 
-- (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 ## Background Knowledge
 ### Suricata (Version: 7.0.10)
-- (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
+- (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
 - (Done) [Suricata Rules](https://docs.suricata.io/en/suricata-8.0.2/rules/intro.html)  
-- (Statistics) [Statistics](https://docs.suricata.io/en/latest/performance/statistics.html)
+- (Done) [Statistics](https://docs.suricata.io/en/latest/performance/statistics.html)
+
+**Statistics Notes**
+- Tools to plot graphs: [Monitoring with Zabbix](http://christophe.vandeplas.com/2013/11/suricata-monitoring-with-zabbix-or-other.html), [Suri-stats](https://github.com/regit/suri-stats)  
 
 **Notes:**  
 1. What are sticky buffers? Placen the buffer names first, then placing keywords that apply to it(e.g. http.uri; content:"hello")   
