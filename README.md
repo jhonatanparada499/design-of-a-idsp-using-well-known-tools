@@ -32,7 +32,7 @@ Using only one virtual machine running Debian/LXDE
 **Statistics Notes**
 - Tools to plot graphs: [Monitoring with Zabbix](http://christophe.vandeplas.com/2013/11/suricata-monitoring-with-zabbix-or-other.html), [Suri-stats](https://github.com/regit/suri-stats)  
 
-**Notes:**  
+**Suricata Rules Notes**
 1. What are sticky buffers? Placen the buffer names first, then placing keywords that apply to it(e.g. http.uri; content:"hello")   
 2. I think I understand the rule matching process, the syntax goes by key-pairs (key:pair) separated by semicolons. If a key has no pair (e.x. "...;ip.src;..." or "...dns.query;..." or "...;http.method;...") look up next key-pair value which will provide the info needed for the pairless key (e.x "ip.src;dataset:badips" or "dns.query;dataset:dns-bl" or http.method;content:"GET")  
 * a function can be passed like (dns.query;to_md5;dataset:dns-bl)  
