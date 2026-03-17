@@ -22,6 +22,7 @@ virt-manager
 
 Using only one virtual machine running Debian/LXDE
 
+- (Done) [Rule Management](https://docs.suricata.io/en/suricata-8.0.2/rule-management/suricata-update.html)
 ## Background Knowledge
 ### Suricata (Version: 7.0.10)
 - (Done) [Quickstart guide](https://docs.suricata.io/en/suricata-8.0.2/quickstart.html#basic-setup)
