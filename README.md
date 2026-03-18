@@ -1,6 +1,8 @@
 # Design of a IDSP Using Well Known Tools
 Research documentation as part of CRSP CUNY.  
 
+**Currently working:** How to print the timestamp stats of when I started replying traffic to compare with evebox. What does the number in the Dashboard alert panel mean.  
+
 ## Table of Contents
 - Environment Setup
 - Background Knowledge
