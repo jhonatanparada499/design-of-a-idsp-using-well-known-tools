@@ -165,6 +165,30 @@ Statistics for network device: eth7
 ```
 
 ## Current Standing  
-- Read Performance/statistics section to understand stats.log file
-- Test replay traffic to container.
-- Replay Bad traffic (from Malware-Traffic-Analysis) to Docker container using traffic with IoC
+- Experimenting
+
+## Experiments
+### 2026-01-31-traffic-analysis-exercise
+
+| # | Count | Signature | Src -> Dst | Class | Rationale |
+|---|-------|-----------|-----------|-------|-----------|
+| 1 | 4 | SURICATA STREAM ESTABLISHED packet out of window (app_proto:smb) | 10.1.21.2 → 10.1.21.58 | FP | SMB stream reassembly noise from the DC; TCP artifact, not a confirmed malicious indicator |
+| 2 | 4 | SURICATA STREAM ESTABLISHED invalid ack (app_proto:smb) | 10.1.21.58 → 10.1.21.2 | FP | TCP stream anomaly on SMB to DC; benign reassembly artifact |
+| 3 | 4 | SURICATA STREAM Packet with invalid ack (app_proto:smb) | 10.1.21.58 → 10.1.21.2 | FP | Same as above; TCP artifact on normal SMB domain traffic |
+| 4 | 1 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:communicationfirewall-security.cc) | 10.1.21.58 → 104.21.9.36 | TP | Lumma Stealer uses the SoftEther JA3 fingerprint; .cc domain is confirmed C2 |
+| 5 | 15 | ET MALWARE Observed Win32/Lumma Stealer Related Domain (whitepepper.su) in TLS SNI | 10.1.21.58 → 153.92.1.49 | TP | Direct Lumma Stealer C2 domain hit in TLS SNI; high-confidence match |
+| 6 | 13 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:whitepepper.su) | 10.1.21.58 → 153.92.1.49 | TP | Lumma's characteristic JA3 fingerprint to confirmed C2 host |
+| 7 | 1 | ET DROP Spamhaus DROP Listed Traffic Inbound group 10 | 80.97.160.24 → 10.1.21.58 | TP | Inbound from a Spamhaus DROP-listed IP to the infected host; corroborates active C2 |
+| 8 | 2 | ET DNS Query for .cc TLD (rrname:communicationfirewall-security.cc) | 10.1.21.58 → 10.1.21.2 | TP | Infected host resolving a known Lumma C2 domain via .cc TLD |
+| 9 | 1 | SURICATA STREAM ESTABLISHED packet out of window (app_proto:tls) | 10.1.21.58 → 153.92.1.49 | TP | Stream anomaly on confirmed C2 channel (153.92.1.49 = whitepepper.su); malicious context makes this TP |
+| 10 | 10 | ET MALWARE Win32/Lumma Stealer Related CnC Domain in DNS Lookup (whitepepper.su) | 10.1.21.58 → 10.1.21.2 | TP | DNS lookup for confirmed Lumma C2 domain; direct signature match |
+| 11 | 10 | ET DNS Query for .su TLD (Soviet Union) Often Malware Related (rrname:whitepepper.su) | 10.1.21.58 → 10.1.21.2 | TP | .su lookup confirmed malicious (whitepepper.su = Lumma C2) |
+| 12 | 6 | ET INFO HTTP Request to .su TLD (Soviet Union) Often Malware Related (hostname:whitepepper.su) | 10.1.21.58 → 153.92.1.49 | TP | HTTP to confirmed Lumma C2 host; staging/fingerprinting phase |
+| 13 | 1 | ET MALWARE Lumma Stealer Victim Fingerprinting Activity (hostname:whitepepper.su) | 10.1.21.58 → 153.92.1.49 | TP | The scenario's primary alert; Lumma performing victim fingerprinting — highest-confidence TP |
+| 14 | 2 | ET MALWARE Win32/Lumma Stealer Related CnC Domain in DNS Lookup (whooptm.cyou) | 10.1.21.58 → 10.1.21.2 | TP | Second Lumma C2 domain resolved by infected host |
+| 15 | 1 | ET MALWARE Observed Win32/Lumma Stealer Related Domain (whooptm.cyou) in TLS SNI | 10.1.21.58 → 62.72.32.156 | TP | TLS connection to second confirmed Lumma C2 domain |
+| 16 | 1 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:whooptm.cyou) | 10.1.21.58 → 62.72.32.156 | TP | Lumma JA3 fingerprint on second C2 channel |
+| 17 | 1 | SURICATA STREAM excessive retransmissions (app_proto:tls) | 104.21.46.67 → 10.1.21.58 | FP | 104.21.46.67 is a Cloudflare IP; retransmissions are TCP noise, no confirmed malicious association |
+| 18 | 1 | SURICATA STREAM excessive retransmissions (app_proto:tls) | 10.1.21.58 → 104.17.25.14 | FP | 104.17.25.14 is also Cloudflare; TCP retransmission noise |
+| 19 | 2 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:assets.adobedtm.com) | 10.1.21.58 → 184.29.31.84 | FP | Adobe DTM is a legitimate marketing tag manager CDN; JA3 match is coincidental |
+| 20 | 1 | ET INFO Microsoft Connection Test (hostname:www.msftconnecttest.com) | 10.1.21.58 → 23.55.178.249 | FP | Normal Windows network connectivity probe; fully benign |
