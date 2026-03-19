@@ -172,6 +172,14 @@ Statistics for network device: eth7
 ## Experiments
 ### 2026-01-31-traffic-analysis-exercise
 
+**True Positives:** 13  
+**False Positives:** 7  
+**False Negative:** 0  
+
+**Precision:** 65%  
+**Recall:** 100%  
+**F1 Score:** 78%  
+
 | # | Count | Signature | Src -> Dst | Class | Rationale |
 |---|-------|-----------|-----------|-------|-----------|
 | 1 | 4 | SURICATA STREAM ESTABLISHED packet out of window (app_proto:smb) | 10.1.21.2 → 10.1.21.58 | FP | SMB stream reassembly noise from the DC; TCP artifact, not a confirmed malicious indicator |
@@ -195,11 +203,3 @@ Statistics for network device: eth7
 | 19 | 2 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:assets.adobedtm.com) | 10.1.21.58 → 184.29.31.84 | FP | Adobe DTM is a legitimate marketing tag manager CDN; JA3 match is coincidental |
 | 20 | 1 | ET INFO Microsoft Connection Test (hostname:www.msftconnecttest.com) | 10.1.21.58 → 23.55.178.249 | FP | Normal Windows network connectivity probe; fully benign |
 
-
-**True Positives:** 13  
-**False Positives:** 7  
-**False Negative:** 0  
-
-**Precision:** 65%  
-**Recall:** 100%  
-**F1 Score:** 78%  
