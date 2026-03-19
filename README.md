@@ -147,6 +147,7 @@ Task: Investigate how rule signatures work and how they are triggered. (Done)
 
 ## Replaying Traffic
 [Tcpreplay](https://tcpreplay.appneta.com/) "is a suite of free Open Source utilities for editing and replaying previously captured network traffic".  
+**Notes:** A mistake I make when I used this command last semester was not using the flag --topspeed. Without it, the replays took longer because it replayed the traffic at the same pace as it was captured.
 
 ```bash
 root@pw29:~# tcpreplay -i eth7 -tK --loop 5000 --unique-ip smallFlows.pcap
