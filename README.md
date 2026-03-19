@@ -198,3 +198,8 @@ Statistics for network device: eth7
 
 **True Positives:** 13
 **False Positives:** 7
+**False Negative:** 0
+
+**Precision:** 65%
+**Recall:** 100%
+**F1 Score:** 78%
