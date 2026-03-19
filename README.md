@@ -196,10 +196,10 @@ Statistics for network device: eth7
 | 20 | 1 | ET INFO Microsoft Connection Test (hostname:www.msftconnecttest.com) | 10.1.21.58 → 23.55.178.249 | FP | Normal Windows network connectivity probe; fully benign |
 
 
-**True Positives:** 13
-**False Positives:** 7
-**False Negative:** 0
+**True Positives:** 13  
+**False Positives:** 7  
+**False Negative:** 0  
 
-**Precision:** 65%
-**Recall:** 100%
-**F1 Score:** 78%
+**Precision:** 65%  
+**Recall:** 100%  
+**F1 Score:** 78%  
