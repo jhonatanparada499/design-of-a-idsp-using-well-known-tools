@@ -194,3 +194,7 @@ Statistics for network device: eth7
 | 18 | 1 | SURICATA STREAM excessive retransmissions (app_proto:tls) | 10.1.21.58 → 104.17.25.14 | FP | 104.17.25.14 is also Cloudflare; TCP retransmission noise |
 | 19 | 2 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:assets.adobedtm.com) | 10.1.21.58 → 184.29.31.84 | FP | Adobe DTM is a legitimate marketing tag manager CDN; JA3 match is coincidental |
 | 20 | 1 | ET INFO Microsoft Connection Test (hostname:www.msftconnecttest.com) | 10.1.21.58 → 23.55.178.249 | FP | Normal Windows network connectivity probe; fully benign |
+
+
+**True Positives:** 13
+**False Positives:** 7
