@@ -1,4 +1,6 @@
 # Design of a IDSP Using Well Known Tools
+TASK: investigate exactly what caused the alerts to be generated in experiment 1. Was it a signature and regex, some contemt in the metadata of the trafic?  
+
 Research documentation as part of CRSP CUNY.  
 
 **Currently working:** How to print the timestamp stats of when I started replying traffic to compare with evebox. What does the number in the Dashboard alert panel mean.  
