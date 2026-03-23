@@ -218,6 +218,13 @@ Enter the Snort Container
 ```
 $ docker exec -it snort3 bash
 ```
+Stop
+```
+docker kill snort3
+```
+
+runsnort.py script provided by Talos_LightSPD  
+![runsnort.py](./images/runsnort_interface.png)
 
 Rules used for Snort3: https://rules.emergingthreats.net/open/snort-2.9.0/  
 emerging-all.rules	2026-03-23T20:40:28Z	44.11 MB  did not work, 
