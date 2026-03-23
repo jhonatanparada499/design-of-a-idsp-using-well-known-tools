@@ -1,15 +1,13 @@
 # Design of a IDSP Using Well Known Tools
 Research documentation as part of CRSP CUNY.  
 
-**Currently working:** How to print the timestamp stats of when I started replying traffic to compare with evebox. What does the number in the Dashboard alert panel mean.  
-
 ## Table of Contents
 - Environment Setup
 - Background Knowledge
 - Challenges and Resolutions
 - Snort and Suricata Rules
 - Event Viewer and Alert Management Tool (Evebox)
-- Current Standing
+- Experiments
 
 ## Environment Setup
 Enable libvirtd service
@@ -163,9 +161,6 @@ Statistics for network device: eth7
 	Retried packets (ENOBUFS): 0
 	Retried packets (EAGAIN):  0
 ```
-
-## Current Standing  
-- Experimenting
 
 ## Experiments
 ### 2026-01-31-traffic-analysis-exercise
