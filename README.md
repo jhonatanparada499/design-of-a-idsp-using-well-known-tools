@@ -199,7 +199,7 @@ emerging-all.rules	2026-03-23T20:40:35Z	41.77 MB
 | 19 | 2 | ET JA3 Hash — Possible SoftEther Windows Client SSTP Traffic (sni:assets.adobedtm.com) | 10.1.21.58 → 184.29.31.84 | FP | Adobe DTM is a legitimate marketing tag manager CDN; JA3 match is coincidental |
 | 20 | 1 | ET INFO Microsoft Connection Test (hostname:www.msftconnecttest.com) | 10.1.21.58 → 23.55.178.249 | FP | Normal Windows network connectivity probe; fully benign |
 
-**Snort3**  
+**Snort3 (Version 3)**  
 ciscotalos/snort3 docker container  
 Source: https://hub.docker.com/r/ciscotalos/snort3  
 
@@ -252,3 +252,7 @@ snort -c lightspd/policies/3.1.0.0-0/maximum-detection.lua --daq-dir /usr/local/
 ```
 alert tls $HOME_NET any -> any any (msg:"ET MALWARE Observed Win32/Lumma Stealer Related Domain (whitepepper .su) in TLS SNI"; flow:established,to_server; tls.sni; bsize:14; content:"whitepepper.su"; fast_pattern; nocase; reference:md5,dc518a45c58b82ed194c465ba1c73148; classtype:domain-c2; sid:2066542; rev:1; metadata:tls_state TLSEncrypt, created_at 2025_12_31, deployment Perimeter, malware_family Lumma_Stealer, confidence High, signature_severity Critical, updated_at 2025_12_31, mitre_tactic_id TA0011, mitre_tactic_name Command_And_Control, mitre_technique_id T1071, mitre_technique_name Application_Layer_Protocol; target:src_ip;)
 ```
+
+## Research Presentation
+
+
