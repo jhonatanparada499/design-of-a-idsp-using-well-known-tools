@@ -165,8 +165,8 @@ Statistics for network device: eth7
 ## Experiments
 ### 2026-01-31-traffic-analysis-exercise
 
-![lumma_info_stealer](./images/lumma-detection-h2-2024.png)
-ESET telemetry shows a massive rise in detection of Lumma Stealer for H2 2024. (Source: ESET Threat Report H2 2024)  
+![lumma_info_stealer](./images/lumma-detection-h2-2024.png)  
+"ESET telemetry shows a massive rise in detection of Lumma Stealer for H2 2024." (Source: ESET Threat Report H2 2024)  
 
 **Suricata**  
 Rules used for Suricata: https://rules.emergingthreats.net/open/suricata-7.0.3/  
