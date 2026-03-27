@@ -257,6 +257,8 @@ alert tls $HOME_NET any -> any any (msg:"ET MALWARE Observed Win32/Lumma Stealer
 
 ![mem_vm](./images/virtual_machine_mem_usage.png)
 
+![docker_vm](./images/docker_mem_usage.png)
+
 System: Linux hp-laptop 6.14.0-29-generic #29~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Aug 14 16:52:50 UTC 2 x86_64 x86_64 x86_64 GNU/Linux  
 DE: ICEWM  
 
