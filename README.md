@@ -254,9 +254,45 @@ alert tls $HOME_NET any -> any any (msg:"ET MALWARE Observed Win32/Lumma Stealer
 ```
 
 ## Performance
-Baseline  
 System: Linux hp-laptop 6.14.0-29-generic #29~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Aug 14 16:52:50 UTC 2 x86_64 x86_64 x86_64 GNU/Linux  
 DE: ICEWM  
+
+Baseline (Docker and libvirtd deamons inactive)  
+Memory represented in Megabytes  
+```
                total        used        free      shared  buff/cache   available
 Mem:            7586         736        6589          32         529        6850
 Swap:           2047           0        2047
+```
+
+- QEMU/KVM + Debian13 VM + Suricata + Evebox  
+
+libvirtd service is started using systemctl  
+```
+               total        used        free      shared  buff/cache   available
+Mem:            7586         769        6536          34         551        6817
+Swap:           2047           0        2047
+```
+
+Debian 13 (LXDE) Virtual machine is turned on, Suricata is active.  
+```
+               total        used        free      shared  buff/cache   available
+Mem:            7586        2615        3978          45        1277        4971
+Swap:           2047           0        2047
+```
+
+Debian 13 (LXDE) Virtual machine is turned on, Suricata is active, and Evebox server.  
+```
+               total        used        free      shared  buff/cache   available
+Mem:            7586        2832        3637          63        1420        4754
+Swap:           2047           0        2047
+```
+
+- Docker + Suricata + Evebox  
+
+Evectl is called, enabling Docker
+```
+               total        used        free      shared  buff/cache   available
+Mem:            7586        1212        5228          35        1419        6374
+Swap:           2047           0        2047
+```
