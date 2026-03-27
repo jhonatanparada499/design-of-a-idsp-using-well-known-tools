@@ -1,4 +1,7 @@
 # Design of a IDSP Using Well Known Tools
+
+TASK: make visual for KVM and Docker comparison  
+
 Research documentation as part of CRSP CUNY.  
 
 ## Table of Contents
