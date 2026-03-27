@@ -255,6 +255,10 @@ alert tls $HOME_NET any -> any any (msg:"ET MALWARE Observed Win32/Lumma Stealer
 
 ## Performance
 
+Docker memory savings vs QEMU/KVM  
+−1,620 MB  
+57% less used memory  
+
 ![mem_vm](./images/virtual_machine_mem_usage.png)
 
 ![docker_vm](./images/docker_mem_usage.png)
