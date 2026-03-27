@@ -164,6 +164,9 @@ Statistics for network device: eth7
 
 ## Experiments
 ### 2026-01-31-traffic-analysis-exercise
+
+![lumma_info_stealer](./images/lumma-detection-h2-2024.png)
+
 **Suricata**  
 Rules used for Suricata: https://rules.emergingthreats.net/open/suricata-7.0.3/  
 emerging-all.rules	2026-03-23T20:40:35Z	41.77 MB
