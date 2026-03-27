@@ -253,6 +253,10 @@ snort -c lightspd/policies/3.1.0.0-0/maximum-detection.lua --daq-dir /usr/local/
 alert tls $HOME_NET any -> any any (msg:"ET MALWARE Observed Win32/Lumma Stealer Related Domain (whitepepper .su) in TLS SNI"; flow:established,to_server; tls.sni; bsize:14; content:"whitepepper.su"; fast_pattern; nocase; reference:md5,dc518a45c58b82ed194c465ba1c73148; classtype:domain-c2; sid:2066542; rev:1; metadata:tls_state TLSEncrypt, created_at 2025_12_31, deployment Perimeter, malware_family Lumma_Stealer, confidence High, signature_severity Critical, updated_at 2025_12_31, mitre_tactic_id TA0011, mitre_tactic_name Command_And_Control, mitre_technique_id T1071, mitre_technique_name Application_Layer_Protocol; target:src_ip;)
 ```
 
-## Research Presentation
-
-
+## Performance
+Baseline  
+System: Linux hp-laptop 6.14.0-29-generic #29~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Aug 14 16:52:50 UTC 2 x86_64 x86_64 x86_64 GNU/Linux  
+DE: ICEWM  
+               total        used        free      shared  buff/cache   available
+Mem:            7586         736        6589          32         529        6850
+Swap:           2047           0        2047
