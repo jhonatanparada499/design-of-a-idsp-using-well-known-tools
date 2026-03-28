@@ -18,6 +18,9 @@ Research documentation as part of CRSP CUNY.
 (Market Growth Reports)  
 Source: https://www.marketgrowthreports.com/market-reports/intrusion-detection-system-intrusion-prevention-system-ids-ips-market-110928  
 
+**Part 1 of the research, snort is Talos_LightSPD rules vs Suricata total alert generation on the same traffic**  
+![snort_vs_suricata](./images/Suricata_vs_snort_log_scale.png)
+
 ## Environment Setup
 Enable libvirtd service
 ```
