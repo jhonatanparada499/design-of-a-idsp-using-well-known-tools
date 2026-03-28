@@ -74,6 +74,36 @@ Running Suricata
 sudo systemctl restart suricata
 ```
 
+#### Alert Severity
+
+[Severity Levels](https://github.com/oisf/suricata/security)  
+- Critical
+- High
+- Moderate
+- Low
+
+In the Evebox rule panel there are three colors: Blue, yellow, and red. The blue ones are
+
+**Example of Suricata Signature**  
+```
+alert dns $HOME_NET any -> any any (
+  msg:"ET DNS Query for .cc TLD";
+  dns.query;
+  content:".cc";
+  endswith;
+  fast_pattern;
+  classtype:bad-unknown;
+  sid:2027758;
+  rev:5;
+  metadata:affected_product Any, attack_target Client_Endpoint,
+    created_at 2019_07_26,
+    deployment Perimeter,
+    confidence High,
+    signature_severity Informational,
+    updated_at 2020_09_17;
+ ) 
+```
+
 #### Logs and Stats Directory
 
 ```
