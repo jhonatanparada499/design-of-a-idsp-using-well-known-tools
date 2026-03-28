@@ -1,0 +1,10 @@
+services:
+  app:
+    image: jasonish/evebox:latest
+    command: evebox server -D /var/lib/evebox --datastore sqlite
+    ports:
+      - 127.0.0.1:5636:5636
+    working_dir: /app
+    volumes:
+      - /var/log/suricata:/var/log/suricata:ro
+      - /var/lib/evebox:/var/lib/evebox
