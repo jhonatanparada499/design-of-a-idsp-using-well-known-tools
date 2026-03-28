@@ -84,7 +84,6 @@ sudo systemctl restart suricata
 
 In the Evebox alerts tab there are three colors: Blue, yellow, and red. The blue ones are low, the yellow ones are **informational**, and the red ones are **critical.**  
 
-alert tcp any any -> any any (msg:"SURICATA STREAM ESTABLISHED invalid ack"; stream-event:est_invalid_ack; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210029; rev:3;) 
 **Example of Suricata Signature**  
 ```
 alert dns $HOME_NET any -> any any (
