@@ -79,11 +79,12 @@ sudo systemctl restart suricata
 [Severity Levels](https://github.com/oisf/suricata/security)  
 - Critical
 - High
-- Moderate
+- Moderate (Informational)
 - Low
 
-In the Evebox rule panel there are three colors: Blue, yellow, and red. The blue ones are
+In the Evebox alerts tab there are three colors: Blue, yellow, and red. The blue ones are low, the yellow ones are **informational**, and the red ones are **critical.**  
 
+alert tcp any any -> any any (msg:"SURICATA STREAM ESTABLISHED invalid ack"; stream-event:est_invalid_ack; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210029; rev:3;) 
 **Example of Suricata Signature**  
 ```
 alert dns $HOME_NET any -> any any (
@@ -95,11 +96,12 @@ alert dns $HOME_NET any -> any any (
   classtype:bad-unknown;
   sid:2027758;
   rev:5;
-  metadata:affected_product Any, attack_target Client_Endpoint,
+  metadata:affected_product Any,
+    attack_target Client_Endpoint,
     created_at 2019_07_26,
     deployment Perimeter,
     confidence High,
-    signature_severity Informational,
+    signature_severity Informational,     # Severity = Informational
     updated_at 2020_09_17;
  ) 
 ```
@@ -287,7 +289,31 @@ snort -c lightspd/policies/3.1.0.0-0/maximum-detection.lua --daq-dir /usr/local/
 
 ## Lumma Stealer Signature
 ```
-alert tls $HOME_NET any -> any any (msg:"ET MALWARE Observed Win32/Lumma Stealer Related Domain (whitepepper .su) in TLS SNI"; flow:established,to_server; tls.sni; bsize:14; content:"whitepepper.su"; fast_pattern; nocase; reference:md5,dc518a45c58b82ed194c465ba1c73148; classtype:domain-c2; sid:2066542; rev:1; metadata:tls_state TLSEncrypt, created_at 2025_12_31, deployment Perimeter, malware_family Lumma_Stealer, confidence High, signature_severity Critical, updated_at 2025_12_31, mitre_tactic_id TA0011, mitre_tactic_name Command_And_Control, mitre_technique_id T1071, mitre_technique_name Application_Layer_Protocol; target:src_ip;)
+alert tls $HOME_NET any -> any any (
+  msg:"ET MALWARE Observed Win32/Lumma Stealer Related Domain (whitepepper .su) in TLS SNI";
+  flow:established,to_server;
+  tls.sni;
+  bsize:14;
+  content:"whitepepper.su";
+  fast_pattern;
+  nocase;
+  reference:md5,dc518a45c58b82ed194c465ba1c73148;
+  classtype:domain-c2;
+  sid:2066542;
+  rev:1;
+  metadata:tls_state TLSEncrypt,
+    created_at 2025_12_31,
+    deployment Perimeter,
+    malware_family Lumma_Stealer,
+    confidence High,
+    signature_severity Critical,                      # Severity = Critical
+    updated_at 2025_12_31,
+    mitre_tactic_id TA0011,
+    mitre_tactic_name Command_And_Control,
+    mitre_technique_id T1071,
+    mitre_technique_name Application_Layer_Protocol;
+  target:src_ip;
+ )
 ```
 
 ## Performance
