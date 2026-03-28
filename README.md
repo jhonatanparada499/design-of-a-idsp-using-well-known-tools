@@ -12,6 +12,12 @@ Research documentation as part of CRSP CUNY.
 - Event Viewer and Alert Management Tool (Evebox)
 - Experiments
 
+## Importance
+"The average organization faces 1,200 attempted intrusions monthly, and 41% of these are targeted, requiring automated prevention systems."  
+"In 2024 alone, over 1,600 confirmed data breaches were recorded globally, with over 85% attributed to targeted intrusion attempts."  
+(Market Growth Reports)  
+Source: https://www.marketgrowthreports.com/market-reports/intrusion-detection-system-intrusion-prevention-system-ids-ips-market-110928  
+
 ## Environment Setup
 Enable libvirtd service
 ```
