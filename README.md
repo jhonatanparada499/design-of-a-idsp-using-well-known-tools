@@ -1,6 +1,6 @@
 # Design of a IDSP Using Well Known Tools
 
-TASK: make visual for KVM and Docker comparison  
+TASK: Add characteristics of the lumma stealer traffic that was used.  
 
 Research documentation as part of CRSP CUNY.  
 
