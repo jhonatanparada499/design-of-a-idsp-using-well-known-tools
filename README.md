@@ -1,7 +1,5 @@
 # Design of a IDSP Using Well Known Tools
 
-TASK: Add characteristics of the lumma stealer traffic that was used.  
-
 Research documentation as part of CRSP CUNY.  
 
 ## Table of Contents
